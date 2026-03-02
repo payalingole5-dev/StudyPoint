@@ -1,0 +1,196 @@
+/* --- Global Reset & Fonts --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000; /* Deep black for cinema feel from image_13.png */
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling for navigation links */
+}
+
+/* --- Cinema Style Navigation (Header) --- */
+header {
+    background: rgba(0, 0, 0, 0.95); /* Semi-transparent black */
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff8c00; /* Orange accent line as requested */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    color: #ff8c00; /* Glow from image_13.png accent color */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white; /* Big white font as requested */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 15px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff8c00;
+}
+
+/* --- Main Hero Section (Cinema Titles) --- */
+.cinema-hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/WhatsApp Image 2026-03-02 at 13.24.47.jpeg'); /* Dark background style from image_13.png */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Massive title text from image_13.png style */
+.main-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3.5rem, 12vw, 8.5rem); /* Extra large & responsive on all devices */
+    color: white;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+/* Orange sub-title text from image_13.png style */
+.sub-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2rem, 8vw, 5.5rem);
+    color: #ff8c00; /* Bright orange */
+    margin-top: -10px;
+}
+
+.tagline {
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-style: italic;
+    color: #ddd;
+    margin: 20px 0;
+}
+
+/* Orange Glow Button from image_14.png style */
+.btn-cinema {
+    display: inline-block;
+    background: #ff4500; /* High contrast orange-red */
+    color: white;
+    padding: clamp(12px, 3vw, 18px) clamp(25px, 6vw, 45px);
+    text-decoration: none;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    font-weight: 900;
+    border-radius: 5px;
+    margin-top: 30px;
+    box-shadow: 0 5px 20px rgba(255, 69, 0, 0.4); /* Glow effect from image_14.png style */
+    transition: 0.3s ease;
+}
+
+.btn-cinema:hover {
+    transform: translateY(-5px);
+    background: #ff8c00;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.6);
+}
+
+/* --- Facilities Section --- */
+.section-heading {
+    text-align: center;
+    font-size: clamp(2.5rem, 6vw, 3.5rem); /* Responsive heading size as requested */
+    font-family: 'Anton', sans-serif;
+    padding: 100px 0 40px;
+    color: #ff8c00; /* Orange glow heading from image_13.png style */
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Desktop grid, stacking for mobile */
+    gap: 25px;
+    padding: 0 50px;
+}
+
+/* Facility cards inspired by the layout in image_16.png */
+.card {
+    background: #1a1a1a; /* Dark gray to match image_16.png layout */
+    padding: 40px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff; /* Big white font inside cards as requested */
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    background: #ff8c00;
+    color: black; /* Black text on orange for maximum contrast */
+    transform: translateY(-10px);
+}
+
+/* --- Gallery & Contact Sections --- */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columns desktop, stacks to 1 for mobile as requested */
+    gap: 15px;
+    padding: 0 50px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #333; /* Thick border style */
+}
+
+.contact-card {
+    background: #111; /* Contact section style from image_13.png context */
+    max-width: 800px;
+    margin: 0 auto 100px;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    border-left: 10px solid #ff8c00; /* Orange accent line as requested */
+}
+
+.contact-card p {
+    font-size: 1.4rem;
+    margin: 15px 0;
+}
+
+/* --- Footer --- */
+footer {
+    background: #2c3e50; /* Basic footer color context from image_13.png context */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* --- Mobile Responsiveness Adjustments --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide top nav links on mobile; can add a mobile menu later */
+    }
+}
